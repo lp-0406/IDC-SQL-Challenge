@@ -1,25 +1,18 @@
-🚀 Day 1 – SQL Challenge | Powered by DPDzero
+## 🚀 Day 1 – SQL Challenge | Powered by DPDzero
 
-Starting my SQL journey strong! Today I explored the most fundamental SQL command: SELECT.
+Starting my SQL journey strong!  
+Today I explored the powerful `SELECT` statement — the foundation of data querying.
 
-This command is the key to asking questions from your database and retrieving meaningful information.
+### 💡 Key Learnings
+- `SELECT` retrieves data from tables
+- `SELECT *` shows all columns (use wisely!)
+- `SELECT DISTINCT` removes duplicates and returns unique rows
 
-💡 Key Learnings
+### ✅ Challenge
+List all **unique hospital services** from the hospital database.
 
-SELECT helps extract data from tables.
+### 📸 Screenshot
+![Day 1 SQL Work](Day1/day1_screenshot.png)
 
-SELECT * displays all columns — helpful, but not always efficient.
-
-SELECT DISTINCT removes duplicates and returns unique values.
-
-✅ Challenge
-
-Retrieve all unique hospital services from the database using SELECT DISTINCT.
-
-This simple command showed me how powerful and clear data retrieval can be when used smartly!
-
-A big thanks to Indian Data Club and DPDzero for this learning experience!
-
-🔥 Ready for Day 2!
-
+A big thanks to **Indian Data Club** & **DPDzero** for organizing this amazing challenge. Excited for Day 2! 🚀
 
