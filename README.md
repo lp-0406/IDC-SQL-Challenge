@@ -7,7 +7,6 @@ I’ve officially joined the **21 Days SQL Challenge** organized by [**Indian Da
 I’ll be documenting my **entire 21-day SQL learning journey** here — from absolute basics to advanced concepts like **CTEs, window functions, and subqueries**.  
 The goal? Build strong SQL fundamentals and get *hands-on* with real-world problem-solving using the **Hospital Database** 🏥  
 
----
 
 ## 🌟 Why I’m Doing This
 
@@ -19,7 +18,7 @@ This challenge is my commitment to:
 - Learn the *why* behind every query, not just the *how*  
 - Build a solid portfolio of SQL scripts right here on GitHub 💻  
 
----
+
 
 ## 🧭 Challenge Overview
 
@@ -47,7 +46,7 @@ This challenge is my commitment to:
 | 20 | Window Functions (Aggregates) | Running totals & moving averages |
 | 21 | CTEs | Organizing complex queries |
 
----
+
 
 ## 💾 Dataset Setup
 
@@ -65,7 +64,7 @@ The challenge uses a **Hospital Management Database**, including:
 |-------------|------|-----|---------------|----------------|----------|---------------|
 | PAT-09484753 | Richard Rodriguez | 24 | 2025-03-16 | 2025-03-22 | surgery | 61 |
 
----
+
 
 ## 📘 Daily Learning Log
 
