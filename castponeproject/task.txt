@@ -1,0 +1,55 @@
+use murder_mystery;
+
+#Q1: Who entered the CEO’s Office close to the time of the murder?
+select e.employee_id, e.name,kl.room,kl.entry_time
+from keycard_logs as kl
+left join employees as e 
+on kl.employee_id= e.employee_id
+where kl.room="CEO Office";
+
+#Q2: Who claimed to be somewhere else but was not?
+select kl.employee_id,e.name,a.claimed_location,kl.room as acutual_room
+from keycard_logs as kl
+left join employees as e
+on kl.employee_id = e.employee_id
+left join alibis as a
+on kl.employee_id = a.employee_id
+where kl.room="CEO Office";
+
+#Q3: Who made or received calls around 20:50–21:00?
+
+SELECT 
+    e1.name AS caller,
+    e2.name AS receiver,
+    c.call_time
+FROM calls c
+JOIN employees e1 ON e1.employee_id = c.caller_id
+JOIN employees e2 ON e2.employee_id = c.receiver_id
+WHERE TIME(c.call_time) BETWEEN '20:50:00' AND '21:00:00';
+
+#Q4 What evidence was found at the crime scene?
+select description from evidence;
+
+
+#Q5: Which suspect’s movements, alibi, and call activity don’t add up?
+
+SELECT DISTINCT
+    e.employee_id,
+    e.name,
+    a.claimed_location,
+    kl.room AS actual_room,
+    c.call_time
+FROM employees e
+
+JOIN keycard_logs kl
+    ON e.employee_id = kl.employee_id
+    AND kl.room = 'CEO Office'
+    AND TIME(kl.entry_time) BETWEEN '20:50:00' AND '21:00:00'
+
+JOIN alibis a
+    ON e.employee_id = a.employee_id
+    AND a.claimed_location <> 'CEO Office'
+
+JOIN calls c
+    ON (e.employee_id = c.caller_id OR e.employee_id = c.receiver_id)
+    AND TIME(c.call_time) BETWEEN '20:50:00' AND '21:00:00';
